@@ -1,7 +1,19 @@
-#priLabel {
+#etiqueta_principal {
 -fx-background-color: #ffff70;
 -fx-padding: 10px;
 -fx-background-radius: 10px;
 -fx-border-color: #00ff00;
 -fx-border-radius: 10px;
+}
+#btn_principal{
+    -fx-background-color: #ff0000;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.0, 0, 3);
+
 }

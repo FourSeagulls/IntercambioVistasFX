@@ -6,8 +6,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" prefHeight="178.0" prefWidth="168.0" spacing="20" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.maestra.controladores.ControladorPrincipal">
-   <TextField fx:id="campo_entrada_principal"/>
-    <Label fx:id="priLabel" text="¡Hola desde Scene Builder!" id="priLabel"/>
-    <Button fx:id="btn_pri_pulsame" onAction="#priBotonPulsado" text="Púlsame" />
-   <Label fx:id="priLabel2" text="y JavaFX" />
+   <TextField fx:id="campo_entrada_principal" />
+    <Label id="etiqueta_principal" fx:id="etiqueta_principal" text="¡Hola desde Scene Builder!" />
+    <Button fx:id="btn_principal" onAction="#btn_principal_pulsado" text="Púlsame" />
+   <Label fx:id="etiqueta_principal1" text="y JavaFX" />
 </VBox>

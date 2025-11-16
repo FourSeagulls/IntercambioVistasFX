@@ -9,12 +9,12 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class MainApp extends Application {
-
+    public Parent raiz;
     @Override
     public void start(Stage escenario) throws Exception {
 
         try {
-            Parent raiz = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/maestra/VistaPrincipal.fxml")));
+            raiz = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/maestra/VistaPrincipal.fxml")));
 
             Scene escena = new Scene(raiz, 600, 400);
             escena.getStylesheets().add(MainApp.class.getResource("style.css").toExternalForm());

@@ -14,41 +14,35 @@ public class ControladorPrincipal {
     @FXML
     private TextField campo_entrada_principal;
     @FXML
-    private Label priLabel;
+    private Label etiqueta_principal;
     @FXML
-    private Button btn_pri_pulsame;
+    private Button btn_principal;
     @FXML
-    private Label priLabel2;
+    private Label etiqueta_principal1;
 
     private Stage escenario;
     private Scene escena;
     private Parent raiz;
 
     @FXML
-    private void priBotonPulsado() {
+    public void btn_principal_pulsado() {
         String nombreUsuario = campo_entrada_principal.getText();
-        FXMLLoader cargaVistaSeg = new FXMLLoader(getClass().getResource("/org/maestra/VistaSegunda.fxml"));
+        FXMLLoader cargaVistaSegunda = new FXMLLoader(getClass().getResource("/org/maestra/VistaSegunda.fxml"));
 
         try {
             //raiz = cargador.load(getClass().getResource("/org/maestra/VistaSegunda.fxml").openStream());
-            raiz = cargaVistaSeg.load();
+            raiz = cargaVistaSegunda.load();
 
-            ControladorSegundo controlador = cargaVistaSeg.getController();
-            controlador.muestraNombre(nombreUsuario);
+            ControladorSegundo controladorSegundo = cargaVistaSegunda.getController();
+            controladorSegundo.saludaNombre(nombreUsuario);
+            controladorSegundo.nombreUsuario = nombreUsuario;
 
-            escenario = (Stage) btn_pri_pulsame.getScene().getWindow();
+            escenario = (Stage) btn_principal.getScene().getWindow();
             escena = new Scene(raiz);
             escenario.setScene(escena);
             escenario.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //nombreUsuario = ((nombreUsuario == null) || nombreUsuario.trim().isEmpty()) ? "Amigo" : nombreUsuario.trim();
-
-/*
-        priLabel.setText("Has pulsado el botón "+nombreUsuario);
-        btn_pri_pulsame.setText("¡Pulsado!");
-        priLabel2.setText("¡¡¡ Ole !!!");
-*/
     }
 }
